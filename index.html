@@ -386,23 +386,172 @@
   <script>
     const reports = [
   {
+    amountSummary: "超 17 亿元，另有数亿元级案例",
+    cases: [
+      {
+        company: "云天畅想",
+        industry: "边缘云与AI算力",
+        industryClass: "enterprise",
+        intro: "提供边缘云基础设施、云电竞与 AI 算力服务，布局算力网络与边缘节点能力。",
+        amount: "超 10 亿元",
+        amountNote: "",
+        round: "E 轮",
+        investors: "中国互联网投资基金领投，中金资本等机构联合投资。",
+        sourceName: "投资界",
+        sourceUrl: "https://news.pedaily.cn/202606/565278.shtml"
+      },
+      {
+        company: "逆矩阵",
+        industry: "世界模型",
+        industryClass: "enterprise",
+        intro: "构建通用世界基座模型，为工业、具身智能、物理仿真与科学预测提供底层认知引擎。",
+        amount: "超 1 亿美元",
+        amountNote: "按近似汇率折算超过 7 亿元人民币。",
+        round: "种子++轮",
+        investors: "经纬创投、光合创投、五源资本、BAI资本、钟鼎资本等参与，并获蚂蚁集团战略投资，老股东高瓴创投、燕缘创投持续加注。",
+        sourceName: "投资界",
+        sourceUrl: "https://news.pedaily.cn/202606/565318.shtml"
+      },
+      {
+        company: "纵维立方",
+        industry: "3D 打印",
+        industryClass: "deeptech",
+        intro: "Anycubic 母公司，提供消费级与专业级 3D 打印设备、材料及制造解决方案。",
+        amount: "数亿元",
+        amountNote: "",
+        round: "B 轮",
+        investors: "达晨、国泰海通联合领投，挑战者创投、未来资产资本（中国）、清波基金跟投。",
+        sourceName: "投资界",
+        sourceUrl: "https://news.pedaily.cn/202606/565277.shtml"
+      }
+    ],
+    date: "2026-06-17",
+    windowStart: "2025-06-17",
+    windowEnd: "2026-06-17"
+  },
+  {
+    amountSummary: "超 20 亿元，另有数亿元级案例",
+    cases: [
+      {
+        company: "硅基流动",
+        industry: "AI 基础设施",
+        industryClass: "enterprise",
+        intro: "提供大模型云服务、推理加速与弹性算力调度，定位生成式 AI 基础设施平台。",
+        amount: "超 20 亿元",
+        amountNote: "",
+        round: "B 轮",
+        investors: "携程战投、晶科能源控股、金蝶股份、联通新沃、盛奕资本、壁仞战投、蔚来资本、商汤战投、巨人网络、国泰君安创新投、纪源资本、华登国际、华控基金、国开金融、中关村科学城等联合投资。",
+        sourceName: "投资界",
+        sourceUrl: "https://news.pedaily.cn/202606/565261.shtml"
+      },
+      {
+        company: "深朴智能",
+        industry: "机器人控制系统",
+        industryClass: "auto",
+        intro: "研发具身智能机器人的控制系统与关键模组，服务工业和复杂运动场景。",
+        amount: "数亿元",
+        amountNote: "",
+        round: "Pre-A 轮",
+        investors: "红杉中国种子基金与高瓴创投联合领投，三一创投、商汤国香资本、联想创投等跟投。",
+        sourceName: "投资界",
+        sourceUrl: "https://news.pedaily.cn/202606/565268.shtml"
+      }
+    ],
+    date: "2026-06-16",
+    windowStart: "2025-06-17",
+    windowEnd: "2026-06-17"
+  },
+  {
+    amountSummary: "超 20 亿元",
+    cases: [
+      {
+        company: "世航智能",
+        industry: "具身智能机器人",
+        industryClass: "auto",
+        intro: "全球领先的海洋具身机器人公司，专注海洋通用机器人的研发、生产、销售与服务。",
+        amount: "超 10 亿元",
+        amountNote: "",
+        round: "A 轮",
+        investors: "上河动量基金、Vertex Growth、中国最大农业产业基金、誉尊资本、大洋电机参与，老股东金沙江创投、祥峰中国基金、华映资本、长石资本、盛景嘉成资本、鞍羽资本超额追投。",
+        sourceName: "投资界",
+        sourceUrl: "https://news.pedaily.cn/202606/565212.shtml"
+      },
+      {
+        company: "极佳视界",
+        industry: "机器人视觉",
+        industryClass: "auto",
+        intro: "面向机器人视觉感知与具身智能场景提供产品和算法能力。",
+        amount: "10 亿元",
+        amountNote: "",
+        round: "B2 轮",
+        investors: "狮城资本、中比基金、建投投资、万向钱潮、复星锐正、华盖创赢、金创投、德屹资本、华仓资本、元石基金等投资，国中资本、达晨财智、图灵资管等老股东超额加注。",
+        sourceName: "投资界",
+        sourceUrl: "https://news.pedaily.cn/202606/565201.shtml"
+      }
+    ],
+    date: "2026-06-15",
+    windowStart: "2025-06-17",
+    windowEnd: "2026-06-17"
+  },
+  {
+    amountSummary: "0",
+    cases: [],
+    date: "2026-06-14",
+    windowStart: "2025-06-17",
+    windowEnd: "2026-06-17"
+  },
+  {
+    amountSummary: "超 10 亿元",
+    cases: [
+      {
+        company: "微纳核芯",
+        industry: "AI 芯片",
+        industryClass: "enterprise",
+        intro: "聚焦三维存算一体 AI 芯片，推进端侧与云侧大模型推理协处理器产品化。",
+        amount: "超 10 亿元",
+        amountNote: "公开表述为已完成超 10 亿元 B 轮系列融资。",
+        round: "B 轮系列",
+        investors: "中国移动链长基金、超越摩尔、江城基金、佰维存储、九坤创投、中国互联网投资基金等参与，老股东中芯聚源、毅达资本、蓝驰创投、东方嘉富及立讯精密产投继续加持。",
+        sourceName: "投资界",
+        sourceUrl: "https://news.pedaily.cn/202606/565176.shtml"
+      }
+    ],
+    date: "2026-06-13",
+    windowStart: "2025-06-17",
+    windowEnd: "2026-06-17"
+  },
+  {
+    amountSummary: "0",
+    cases: [],
+    date: "2026-06-12",
+    windowStart: "2025-06-17",
+    windowEnd: "2026-06-17"
+  },
+  {
+    amountSummary: "0",
+    cases: [],
+    date: "2026-06-11",
+    windowStart: "2025-06-17",
+    windowEnd: "2026-06-17"
+  },
+  {
     date: "2026-06-10",
-    windowStart: "2025-06-10",
-    windowEnd: "2026-06-10",
+    windowStart: "2025-06-17",
+    windowEnd: "2026-06-17",
     amountSummary: "0",
     cases: []
   },
   {
     date: "2026-06-09",
-    windowStart: "2025-06-10",
-    windowEnd: "2026-06-10",
+    windowStart: "2025-06-17",
+    windowEnd: "2026-06-17",
     amountSummary: "0",
     cases: []
   },
   {
     date: "2026-06-08",
-    windowStart: "2025-06-10",
-    windowEnd: "2026-06-10",
+    windowStart: "2025-06-17",
+    windowEnd: "2026-06-17",
     amountSummary: "0",
     cases: []
   },
@@ -410,22 +559,22 @@
     amountSummary: "0",
     cases: [],
     date: "2026-06-07",
-    windowStart: "2025-06-10",
-    windowEnd: "2026-06-10"
+    windowStart: "2025-06-17",
+    windowEnd: "2026-06-17"
   },
   {
     amountSummary: "0",
     cases: [],
     date: "2026-06-06",
-    windowStart: "2025-06-10",
-    windowEnd: "2026-06-10"
+    windowStart: "2025-06-17",
+    windowEnd: "2026-06-17"
   },
   {
     amountSummary: "0",
     cases: [],
     date: "2026-06-05",
-    windowStart: "2025-06-10",
-    windowEnd: "2026-06-10"
+    windowStart: "2025-06-17",
+    windowEnd: "2026-06-17"
   },
   {
     amountSummary: "超 3 亿元",
@@ -444,8 +593,8 @@
       }
     ],
     date: "2026-06-04",
-    windowStart: "2025-06-10",
-    windowEnd: "2026-06-10"
+    windowStart: "2025-06-17",
+    windowEnd: "2026-06-17"
   },
   {
     amountSummary: "近 2 亿元",
@@ -464,15 +613,15 @@
       }
     ],
     date: "2026-06-03",
-    windowStart: "2025-06-10",
-    windowEnd: "2026-06-10"
+    windowStart: "2025-06-17",
+    windowEnd: "2026-06-17"
   },
   {
     amountSummary: "0",
     cases: [],
     date: "2026-06-02",
-    windowStart: "2025-06-10",
-    windowEnd: "2026-06-10"
+    windowStart: "2025-06-17",
+    windowEnd: "2026-06-17"
   },
   {
     amountSummary: "数亿元",
@@ -515,8 +664,8 @@
       }
     ],
     date: "2026-06-01",
-    windowStart: "2025-06-10",
-    windowEnd: "2026-06-10"
+    windowStart: "2025-06-17",
+    windowEnd: "2026-06-17"
   },
   {
     amountSummary: "亿元级",
@@ -535,8 +684,8 @@
       }
     ],
     date: "2026-05-27",
-    windowStart: "2025-06-10",
-    windowEnd: "2026-06-10"
+    windowStart: "2025-06-17",
+    windowEnd: "2026-06-17"
   },
   {
     amountSummary: "约 14.4 亿元",
@@ -555,8 +704,8 @@
       }
     ],
     date: "2026-05-26",
-    windowStart: "2025-06-10",
-    windowEnd: "2026-06-10"
+    windowStart: "2025-06-17",
+    windowEnd: "2026-06-17"
   },
   {
     amountSummary: "超 3 亿元",
@@ -575,20 +724,20 @@
       }
     ],
     date: "2026-05-25",
-    windowStart: "2025-06-10",
-    windowEnd: "2026-06-10"
+    windowStart: "2025-06-17",
+    windowEnd: "2026-06-17"
   },
   {
     date: "2026-05-22",
-    windowStart: "2025-06-10",
-    windowEnd: "2026-06-10",
+    windowStart: "2025-06-17",
+    windowEnd: "2026-06-17",
     amountSummary: "0",
     cases: []
   },
   {
     date: "2026-05-21",
-    windowStart: "2025-06-10",
-    windowEnd: "2026-06-10",
+    windowStart: "2025-06-17",
+    windowEnd: "2026-06-17",
     amountSummary: "0",
     cases: []
   },
@@ -596,15 +745,15 @@
     amountSummary: "0",
     cases: [],
     date: "2026-05-20",
-    windowStart: "2025-06-10",
-    windowEnd: "2026-06-10"
+    windowStart: "2025-06-17",
+    windowEnd: "2026-06-17"
   },
   {
     amountSummary: "0",
     cases: [],
     date: "2026-05-19",
-    windowStart: "2025-06-10",
-    windowEnd: "2026-06-10"
+    windowStart: "2025-06-17",
+    windowEnd: "2026-06-17"
   },
   {
     amountSummary: "约 6 亿元",
@@ -635,13 +784,13 @@
       }
     ],
     date: "2026-05-18",
-    windowStart: "2025-06-10",
-    windowEnd: "2026-06-10"
+    windowStart: "2025-06-17",
+    windowEnd: "2026-06-17"
   },
   {
     date: "2026-05-13",
-    windowStart: "2025-06-10",
-    windowEnd: "2026-06-10",
+    windowStart: "2025-06-17",
+    windowEnd: "2026-06-17",
     amountSummary: "约 9.7 亿元",
     cases: [
       {
@@ -672,8 +821,8 @@
   },
   {
     date: "2026-05-11",
-    windowStart: "2025-06-10",
-    windowEnd: "2026-06-10",
+    windowStart: "2025-06-17",
+    windowEnd: "2026-06-17",
     amountSummary: "近 5 亿元",
     cases: [
       {
@@ -692,8 +841,8 @@
   },
   {
     date: "2026-05-08",
-    windowStart: "2025-06-10",
-    windowEnd: "2026-06-10",
+    windowStart: "2025-06-17",
+    windowEnd: "2026-06-17",
     amountSummary: "数亿+",
     cases: [
       {
@@ -712,8 +861,8 @@
   },
   {
     date: "2026-05-07",
-    windowStart: "2025-06-10",
-    windowEnd: "2026-06-10",
+    windowStart: "2025-06-17",
+    windowEnd: "2026-06-17",
     amountSummary: "超 7 亿元",
     cases: [
       {
@@ -732,8 +881,8 @@
   },
   {
     date: "2026-05-06",
-    windowStart: "2025-06-10",
-    windowEnd: "2026-06-10",
+    windowStart: "2025-06-17",
+    windowEnd: "2026-06-17",
     amountSummary: "约 6 亿+",
     cases: [
       {
@@ -764,8 +913,8 @@
   },
   {
     date: "2026-04-23",
-    windowStart: "2025-06-10",
-    windowEnd: "2026-06-10",
+    windowStart: "2025-06-17",
+    windowEnd: "2026-06-17",
     amountSummary: "近 10 亿元",
     cases: [
       {
@@ -799,13 +948,13 @@
       }
     ],
     date: "2026-04-22",
-    windowStart: "2025-06-10",
-    windowEnd: "2026-06-10"
+    windowStart: "2025-06-17",
+    windowEnd: "2026-06-17"
   },
   {
     date: "2026-04-14",
-    windowStart: "2025-06-10",
-    windowEnd: "2026-06-10",
+    windowStart: "2025-06-17",
+    windowEnd: "2026-06-17",
     amountSummary: "超 1 亿元",
     cases: [
       {
@@ -824,8 +973,8 @@
   },
   {
     date: "2026-03-05",
-    windowStart: "2025-06-10",
-    windowEnd: "2026-06-10",
+    windowStart: "2025-06-17",
+    windowEnd: "2026-06-17",
     amountSummary: "约 30 亿+",
     cases: [
       {
@@ -868,8 +1017,8 @@
   },
   {
     date: "2026-03-02",
-    windowStart: "2025-06-10",
-    windowEnd: "2026-06-10",
+    windowStart: "2025-06-17",
+    windowEnd: "2026-06-17",
     amountSummary: "约 38 亿元",
     cases: [
       {
@@ -912,15 +1061,15 @@
   },
   {
     date: "2026-02-24",
-    windowStart: "2025-06-10",
-    windowEnd: "2026-06-10",
+    windowStart: "2025-06-17",
+    windowEnd: "2026-06-17",
     amountSummary: "0",
     cases: []
   },
   {
     date: "2026-02-14",
-    windowStart: "2025-06-10",
-    windowEnd: "2026-06-10",
+    windowStart: "2025-06-17",
+    windowEnd: "2026-06-17",
     amountSummary: "数亿元",
     cases: [
       {
@@ -939,8 +1088,8 @@
   },
   {
     date: "2026-02-11",
-    windowStart: "2025-06-10",
-    windowEnd: "2026-06-10",
+    windowStart: "2025-06-17",
+    windowEnd: "2026-06-17",
     amountSummary: "数亿元",
     cases: [
       {
@@ -959,8 +1108,8 @@
   },
   {
     date: "2026-01-12",
-    windowStart: "2025-06-10",
-    windowEnd: "2026-06-10",
+    windowStart: "2025-06-17",
+    windowEnd: "2026-06-17",
     amountSummary: "10 亿元",
     cases: [
       {
@@ -979,8 +1128,8 @@
   },
   {
     date: "2025-12-25",
-    windowStart: "2025-06-10",
-    windowEnd: "2026-06-10",
+    windowStart: "2025-06-17",
+    windowEnd: "2026-06-17",
     amountSummary: "61.22 亿元",
     cases: [
       {
@@ -999,15 +1148,15 @@
   },
   {
     date: "2025-12-08",
-    windowStart: "2025-06-10",
-    windowEnd: "2026-06-10",
+    windowStart: "2025-06-17",
+    windowEnd: "2026-06-17",
     amountSummary: "0",
     cases: []
   },
   {
     date: "2025-11-10",
-    windowStart: "2025-06-10",
-    windowEnd: "2026-06-10",
+    windowStart: "2025-06-17",
+    windowEnd: "2026-06-17",
     amountSummary: "3 亿元",
     cases: [
       {
@@ -1026,8 +1175,8 @@
   },
   {
     date: "2025-10-15",
-    windowStart: "2025-06-10",
-    windowEnd: "2026-06-10",
+    windowStart: "2025-06-17",
+    windowEnd: "2026-06-17",
     amountSummary: "数亿元",
     cases: [
       {
@@ -1046,8 +1195,8 @@
   },
   {
     date: "2025-09-10",
-    windowStart: "2025-06-10",
-    windowEnd: "2026-06-10",
+    windowStart: "2025-06-17",
+    windowEnd: "2026-06-17",
     amountSummary: "数亿元",
     cases: [
       {
@@ -1066,15 +1215,15 @@
   },
   {
     date: "2025-07-31",
-    windowStart: "2025-06-10",
-    windowEnd: "2026-06-10",
+    windowStart: "2025-06-17",
+    windowEnd: "2026-06-17",
     amountSummary: "0",
     cases: []
   },
   {
     date: "2025-06-23",
-    windowStart: "2025-06-10",
-    windowEnd: "2026-06-10",
+    windowStart: "2025-06-17",
+    windowEnd: "2026-06-17",
     amountSummary: "11 亿元",
     cases: [
       {
@@ -1092,9 +1241,9 @@
     ]
   },
   {
-    date: "2025-06-10",
-    windowStart: "2025-06-10",
-    windowEnd: "2026-06-10",
+    date: "2025-06-17",
+    windowStart: "2025-06-17",
+    windowEnd: "2026-06-17",
     amountSummary: "0",
     cases: []
   }
