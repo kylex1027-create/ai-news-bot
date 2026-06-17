@@ -1,30 +1,1375 @@
-<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>中国大额融资日报</title><style>body{margin:0;background:#f6f8fa;color:#17202a;font-family:Inter,"PingFang SC","Microsoft YaHei",Arial,sans-serif}.shell{max-width:1220px;margin:auto;padding:28px 20px 46px}header{display:grid;grid-template-columns:1fr auto;gap:22px;align-items:end}h1{font-size:clamp(32px,5vw,56px);margin:0 0 10px}.sub{max-width:820px;color:#667383;font-size:15px;line-height:1.7}.card,.metric,details{background:#fff;border:1px solid #d9e1e8;border-radius:8px;box-shadow:0 14px 36px rgba(23,32,42,.06)}.status{padding:16px;min-width:260px}.status span,.metric span{display:block;color:#667383;font-size:13px}.status b{font-size:22px}.metrics{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin:20px 0}.metric{padding:16px}.metric b{font-size:28px}.tabs{display:flex;gap:8px;padding:12px;background:#eef2f5;border-bottom:1px solid #d9e1e8;overflow:auto}.tab{padding:10px 12px;border:1px solid #d9e1e8;border-radius:8px;background:#fff;font-weight:700;cursor:pointer;white-space:nowrap}.tab.on{border-color:#0f766e;background:#e3f2ef;color:#0f766e}.tools{display:grid;grid-template-columns:1fr 180px 160px;gap:10px;padding:14px;border-bottom:1px solid #d9e1e8}input,select{border:1px solid #d9e1e8;border-radius:8px;padding:12px;font:inherit}.wrap{overflow:auto}table{width:100%;min-width:980px;border-collapse:collapse}th,td{padding:14px;border-bottom:1px solid #d9e1e8;text-align:left;vertical-align:top;font-size:14px;line-height:1.55}th{font-size:12px;background:#f7f9fb}.tag{display:inline-flex;border-radius:999px;padding:3px 9px;font-size:12px;font-weight:700;background:#e8eef8;color:#2356a4}.round{background:#fff4d6;color:#8a6500}.amt{color:#b42318;font-weight:800}.src{color:#2356a4;font-weight:700;text-decoration:none}.archive{display:grid;gap:10px;margin-top:16px}summary{padding:14px 16px;font-weight:760;cursor:pointer}.archive div{padding:0 16px 15px;color:#667383;font-size:13px;line-height:1.7}.note{margin-top:16px;padding:15px 16px;color:#667383;line-height:1.7}@media(max-width:880px){header{grid-template-columns:1fr}.metrics{grid-template-columns:repeat(2,1fr)}.tools{grid-template-columns:1fr}}@media(max-width:520px){.metrics{grid-template-columns:1fr}}</style></head><body><main class="shell"><header><section><h1>中国大额融资日报</h1><p class="sub">展示中国公开披露、单笔融资额大于 1 亿元人民币的融资案例。网页每天滚动更新，历史数据保留过去 12 个月并折叠归档。</p></section><aside class="card status"><span>最新更新</span><b id="now">-</b></aside></header><section class="metrics"><div class="metric"><b id="cnt">0</b><span>当前筛选案例</span></div><div class="metric"><b id="sum">-</b><span>当前日期披露金额</span></div><div class="metric"><b id="dates">0</b><span>历史日期数量</span></div><div class="metric"><b>12个月</b><span>滚动历史窗口</span></div></section><section class="card"><nav class="tabs" id="tabs"></nav><section class="tools"><input id="q" placeholder="搜索企业、机构、业务关键词"><select id="ind"></select><select id="rnd"></select></section><section class="wrap"><table><thead><tr><th>企业名称</th><th>所在行业</th><th>业务介绍</th><th>融资额</th><th>融资轮次</th><th>投资机构名称</th><th>来源</th></tr></thead><tbody id="rows"></tbody></table></section></section><section class="archive" id="arc"></section><section class="card note"><b>口径说明：</b>按公开披露日期收录，剔除拟融资、传闻融资、上市公司定增、债券融资、银行授信和基金募资。美元金额按近似汇率折算判断是否超过 1 亿元人民币。</section></main><script>const raw=`2026-05-13|芯驰科技|车规芯片|聚焦高可靠、高性能车规芯片，并从汽车智能化延伸至具身智能全栈芯片能力。|近1亿美元；约7.2亿元人民币|C轮|苏产投领投；陕汽鸿德投资、亦庄国投、北京市先进制造基金、西安财金、益中亘泰等跟投。|36氪|https://eu.36kr.com/zh/newsflashes/3807090766241284
-2026-05-13|微元合成|合成生物|以合成生物技术开发大宗生物基产品，覆盖人类营养、动物营养及多类化合物产业化。|15亿元|新一轮|张其宾、谭瑞清与兴银投资参与股权融资；兴业银行北京分行支持长期银行贷款。|36氪|https://eu.36kr.com/zh/newsflashes/3806969712795398
-2026-05-13|伊米诺康|创新药平台|以基因编辑技术打造下一代抗体发现平台，推进全人源抗体兔、AI抗体药物筛选等能力。|2.5亿元|A轮|维梧资本领投；高脉元航跟投；熙诚金睿、泰煜投资追加投资。|36氪|https://eu.36kr.com/zh/p/3807053435756803
-2026-05-11|鹿明机器人|工业具身智能|面向工业质检、装配、分拣、搬运等场景研发具身智能机器人及大模型能力。|数亿元；累计近10亿元|A1/A2轮|三菱电机领投；普华资本、吴中金控、恒生电子、海高集团、昆石投资等跟投。|新浪财经|https://finance.sina.com.cn/wm/2026-05-11/doc-inhxpati1915973.shtml
-2026-05-11|维他动力|消费级具身智能|研发消费级具身智能产品，代表产品包括Vbot超能机器狗及空间智能硬件。|近5亿元|Pre-A轮|东方嘉富、华泰紫金、复星锐正联合领投；尚颀资本、明荟致远跟投。|DoNews|https://www.donews.com/news/detail/4/6550073.html
-2026-05-08|费勉科技|高端科学仪器|围绕高端科学仪器、工业母机相关方向推进研发、产能和市场拓展。|数亿元|C轮|复容投资、复旦科创、工业母机基金、元禾璞华、深创投等参与。|投资界|https://news.pedaily.cn/202605/563593.shtml
-2026-05-07|无问芯穹|AI基础设施|提供异构算力调度、集群运维和模型服务，定位AGI基础设施与Token生产平台。|超7亿元|新一轮|杭州高新金投、惠远资本联合领投；国兴资本、秦淮数据、广发乾和等跟投。|每日经济新闻|https://www.nbd.com.cn/articles/2026-05-07/4382909.html
-2026-05-06|魔形智能|AI算力与Token服务|定位Token供应商，打造Token超级工厂与创新超节点算力集群。|数亿元|Pre-A轮|达泰资本领投；上海半导体产投、永兴材料、邦盛资本、亿合资本等投资。|投中网|https://finance.sina.com.cn/tech/roll/2026-05-06/doc-inhwxxki3422505.shtml
-2026-05-06|暖芯迦|脑机接口|聚焦视觉脑机接口产品，推进临床试验与核心技术迭代。|3亿元|战略融资|产业投资机构与君联资本联合领投；丰年资本、广发信德、财通资本跟投。|融中财经|https://www.thecapital.com.cn/newsDetail/122574
-2026-04-23|普渡机器人|商用服务机器人|面向餐饮、酒店、零售等场景提供商用服务机器人。|近10亿元|新一轮|龙岗金控、亚投资本联合领投；北汽产投、蓝思科技、弘晖基金等参与。|36氪|https://www.36kr.com/p/3777719893283840
-2026-04-14|蓝点触控|机器人传感器|研发人形机器人六维力传感器、关节力传感器和复合型机器人工作站方案。|超1亿元|C+轮|溥泉资本、智元机器人、银河通用、奥普特、银河源汇等联合投资。|36氪|https://m.36kr.com/p/3766434507440903
-2026-03-05|星动纪元|人形机器人|聚焦人形机器人本体、运动控制和规模化交付。|10亿元|B轮|多家产业资本和财务投资机构参与。|东方财富研报|https://pdf.dfcfw.com/pdf/H3_AP202603241820718442_1.pdf
-2026-03-05|帕西尼|机器人触觉传感|围绕触觉传感器、电子皮肤和多模态感知方案研发量产。|超10亿元|战略轮|研报统计为2026年人形机器人产业10亿级融资之一。|东方财富研报|https://pdf.dfcfw.com/pdf/H3_AP202603241820718442_1.pdf
-2026-03-05|极佳视界|机器人视觉|面向机器人视觉感知与具身智能场景提供产品和算法能力。|近10亿元|Pre-B轮|研报统计为2026年人形机器人产业10亿级融资之一。|东方财富研报|https://pdf.dfcfw.com/pdf/H3_AP202603241820718442_1.pdf
-2026-03-02|银河通用|具身智能机器人|研发通用具身智能机器人及相关大模型、软硬件系统。|25亿元|新一轮|国家人工智能产业基金、中国石化、中信集团投资控股、中国银行等参与。|每经网|https://www.nbd.com.cn/articles/2026-03-02/4275979.html
-2026-03-02|松延动力|人形机器人|研发人形机器人整机及运动能力。|近10亿元|B轮|晨道资本领投；国科投资、京国盛基金、九合创投等跟投。|新浪财经|https://finance.sina.com.cn/chanjing/cyxw/2026-03-03/doc-inhpsavw7710825.shtml
-2026-03-02|优理奇机器人|通用具身智能|研发通用具身智能机器人，面向复杂场景操作与商业化应用。|近3亿元|新一轮股权融资|中金汇融、洪山资本、广州产投、谢诺投资参与；老股东继续追投。|36氪|https://www.36kr.com/p/3707043535778177
-2026-02-24|千寻智能|具身智能|研发具身智能基础模型和机器人系统，推进多场景泛化与商业化落地。|近20亿元|A轮等|云锋基金、混沌投资、TCL创投、明荟致远、重庆产业投资母基金等参与。|36氪|https://www.36kr.com/p/3697141478404870
-2026-02-14|千诀科技|具身大脑|构建世界模型与自主决策中枢，服务机器人场景。|数亿元|Pre-A++扩展轮|祥峰资本、智路资本、英诺天使、钧山资本、集美创投等参与。|36氪|https://36kr.com/p/3680070412152706
-2026-02-11|临界点|机器人灵巧手|研发机器人灵巧手硬件、算法和操作数据集。|数亿元|新一轮|头部互联网大厂领投；BV百度风投、云锋基金、均胜电子等参与。|36氪|https://36kr.com/p/3678179258425990
-2026-01-12|自变量机器人|具身智能基础模型|研发通用具身智能基础模型与机器人系统。|10亿元|A++轮|字节跳动、红杉中国领投；北京信息产业发展基金、深创投等联合投资。|每日经济新闻|https://www.nbd.com.cn/articles/2026-01-12/4216995.html
-2025-12-25|深蓝汽车|新能源汽车|长安旗下新能源智能汽车品牌，推进车型研发、L3自动驾驶和产品矩阵建设。|61.22亿元|C轮|长安汽车、重庆渝富控股集团、招银金融资产投资有限公司共同出资。|IT之家|https://www.ithome.com/0/907/962.htm
-2025-12-08|灵生科技|具身智能机器人|清华系具身智能机器人公司，推进人形机器人量产。|亿元级|Pre-A/Pre-A+轮|上市公司领投；朗科投资、鸿瑞集团、宁波方正等参与。|36氪|https://www.36kr.com/p/3585493555952768
-2025-11-10|无界动力|通用具身智能机器人|通用具身智能机器人公司，聚焦机器人本体、感知和智能控制。|3亿元|天使轮|红杉中国、线性资本领投；高瓴创投、地平线、钟鼎资本等跟投。|36氪|https://www.36kr.com/p/3547970791420033
-2025-10-15|玻色量子|量子计算|研发量子计算软硬件及产业应用平台。|数亿元|A++轮|华德科创、南山战新投联合领投；广发信德、湖南财信产业基金等跟投。|36氪|https://www.36kr.com/p/3508786553740421
-2025-09-10|主线科技|无人驾驶卡车|聚焦港口、物流枢纽、公路货运与城配物流等无人驾驶卡车商业化。|数亿元|战略融资|北京顺义高精尖产业基金、国投创益、榆煤基金、徐州产发等联合投资。|新浪财经|https://finance.sina.cn/stock/jdts/2025-09-10/detail-infpytxk4266166.d.html
-2025-07-31|零次方机器人|具身智能机器人|提供具身智能软硬件、数据采训整体解决方案与商业服务机器人方案。|亿元级|天使+/天使++轮|包河创投、同创伟业、力合科创、水木基金、力合瑞穗等参与。|36氪|https://www.36kr.com/p/3399692881725574
-2025-06-23|银河通用|具身智能机器人|研发具身智能机器人和机器人通用智能平台。|11亿元|新一轮|宁德时代战投及溥泉资本领投；国开科创、北京机器人产业基金等跟投。|每日经济新闻|https://www.nbd.com.cn/articles/2025-06-23/3917796.html
-2025-05-21|面壁智能|大模型|研发端侧大模型与高效推理技术，推进AI原生应用和行业落地。|数亿元|新一轮|洪泰基金、国中资本、清控金信和茅台基金联合投资。|新浪财经|https://finance.sina.com.cn/jjxw/2025-05-27/doc-inexyvzz6942994.shtml
-2025-05-15|魔法原子|具身智能机器人|研发具身智能机器人，推进VLA模型、量产部署和场景验证。|数亿元|战略融资|禾创致远、芯联资本、华映资本、晓池资本、元禾厚望等参与。|每日经济新闻|https://www.nbd.com.cn/articles/2025-05-15/3876689.html`;const data=raw.trim().split('\n').map(l=>{const [date,company,industry,intro,amount,round,investors,sourceName,sourceUrl]=l.split('|');return{date,company,industry,intro,amount,round,investors,sourceName,sourceUrl}});const byDate=[...new Set(data.map(x=>x.date))];let active=byDate[0];const $=s=>document.querySelector(s),tabs=$('#tabs'),rows=$('#rows'),q=$('#q'),ind=$('#ind'),rnd=$('#rnd'),arc=$('#arc');function esc(s){return String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#039;'}[c]))}function opts(el,arr,name){el.innerHTML=`<option value="">全部${name}</option>`+[...new Set(arr)].sort().map(x=>`<option>${esc(x)}</option>`).join('')}function render(){tabs.innerHTML=byDate.map((d,i)=>`<button class="tab ${d===active?'on':''}" data-d="${d}">${d}${i===0?' 最新':''}</button>`).join('');tabs.querySelectorAll('button').forEach(b=>b.onclick=()=>{active=b.dataset.d;render()});const day=data.filter(x=>x.date===active);opts(ind,day.map(x=>x.industry),'行业');opts(rnd,day.map(x=>x.round),'轮次');const kw=q.value.trim().toLowerCase();const f=day.filter(x=>(!kw||Object.values(x).join(' ').toLowerCase().includes(kw))&&(!ind.value||x.industry===ind.value)&&(!rnd.value||x.round===rnd.value));rows.innerHTML=f.map(x=>`<tr><td><b>${esc(x.company)}</b></td><td><span class="tag">${esc(x.industry)}</span></td><td>${esc(x.intro)}</td><td><span class="amt">${esc(x.amount)}</span></td><td><span class="tag round">${esc(x.round)}</span></td><td>${esc(x.investors)}</td><td><a class="src" href="${esc(x.sourceUrl)}" target="_blank">${esc(x.sourceName)}</a></td></tr>`).join('');$('#cnt').textContent=f.length;$('#sum').textContent=day.length+' 条';$('#dates').textContent=byDate.length;$('#now').textContent=`${byDate[0]}（当前查看：${active}）`;arc.innerHTML=byDate.map((d,i)=>{const arr=data.filter(x=>x.date===d);return`<details ${i===0?'open':''}><summary>${d}：${arr.length} 个案例 · 窗口 2025-05-14 至 2026-05-14</summary><div>${arr.map(x=>`${esc(x.company)} · ${esc(x.industry)} · ${esc(x.amount)} · ${esc(x.round)}`).join('<br>')}</div></details>`}).join('')}q.oninput=render;ind.onchange=render;rnd.onchange=render;render();</script></body></html>
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>中国大额融资日报</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --ink: #17202a;
+      --muted: #667383;
+      --line: #d9e1e8;
+      --paper: #f6f8fa;
+      --panel: #ffffff;
+      --teal: #0f766e;
+      --blue: #2356a4;
+      --red: #b42318;
+      --amber: #8a6500;
+      --green-soft: #e3f2ef;
+      --blue-soft: #e8eef8;
+      --red-soft: #fbe8e6;
+      --amber-soft: #fff4d6;
+      --shadow: 0 18px 46px rgba(23, 32, 42, 0.08);
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      background: var(--paper);
+      color: var(--ink);
+      font-family: "Inter", "PingFang SC", "Microsoft YaHei", Arial, sans-serif;
+      letter-spacing: 0;
+    }
+
+    a { color: inherit; }
+
+    .shell {
+      max-width: 1180px;
+      margin: 0 auto;
+      padding: 28px 20px 46px;
+    }
+
+    header {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) auto;
+      gap: 22px;
+      align-items: end;
+      margin-bottom: 20px;
+    }
+
+    h1 {
+      margin: 0 0 10px;
+      font-size: clamp(30px, 4vw, 48px);
+      line-height: 1.06;
+      font-weight: 780;
+    }
+
+    .subtitle {
+      max-width: 780px;
+      margin: 0;
+      color: var(--muted);
+      font-size: 15px;
+      line-height: 1.7;
+    }
+
+    .status {
+      min-width: 220px;
+      border: 1px solid var(--line);
+      background: var(--panel);
+      border-radius: 8px;
+      padding: 14px 16px;
+      box-shadow: var(--shadow);
+    }
+
+    .status span {
+      display: block;
+      color: var(--muted);
+      font-size: 12px;
+      margin-bottom: 6px;
+    }
+
+    .status strong {
+      display: block;
+      font-size: 18px;
+      line-height: 1.35;
+      font-weight: 760;
+    }
+
+    .metrics {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 12px;
+      margin: 20px 0 18px;
+    }
+
+    .metric {
+      min-height: 96px;
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 16px;
+    }
+
+    .metric b {
+      display: block;
+      margin-bottom: 9px;
+      font-size: 26px;
+      line-height: 1;
+    }
+
+    .metric span {
+      color: var(--muted);
+      font-size: 13px;
+      line-height: 1.45;
+    }
+
+    .panel {
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      box-shadow: var(--shadow);
+      overflow: hidden;
+    }
+
+    .tabs {
+      display: flex;
+      gap: 8px;
+      padding: 12px;
+      border-bottom: 1px solid var(--line);
+      background: #eef2f5;
+      overflow-x: auto;
+    }
+
+    .tab {
+      border: 1px solid var(--line);
+      background: var(--panel);
+      color: #334151;
+      border-radius: 8px;
+      padding: 10px 12px;
+      font: inherit;
+      font-size: 13px;
+      font-weight: 720;
+      white-space: nowrap;
+      cursor: pointer;
+    }
+
+    .tab[aria-selected="true"] {
+      border-color: var(--teal);
+      background: var(--green-soft);
+      color: var(--teal);
+    }
+
+    .toolbar {
+      display: grid;
+      grid-template-columns: minmax(220px, 1fr) 190px 160px;
+      gap: 10px;
+      padding: 14px;
+      border-bottom: 1px solid var(--line);
+    }
+
+    input, select {
+      width: 100%;
+      border: 1px solid var(--line);
+      background: var(--panel);
+      color: var(--ink);
+      border-radius: 8px;
+      padding: 12px 13px;
+      font: inherit;
+      outline: none;
+    }
+
+    input:focus, select:focus {
+      border-color: var(--teal);
+      box-shadow: 0 0 0 3px rgba(15, 118, 110, 0.15);
+    }
+
+    .table-wrap { overflow-x: auto; }
+
+    table {
+      width: 100%;
+      min-width: 960px;
+      border-collapse: collapse;
+      table-layout: fixed;
+    }
+
+    thead {
+      background: #f7f9fb;
+      color: #334151;
+    }
+
+    th, td {
+      padding: 15px 14px;
+      border-bottom: 1px solid var(--line);
+      text-align: left;
+      vertical-align: top;
+      font-size: 14px;
+      line-height: 1.55;
+    }
+
+    th {
+      font-size: 12px;
+      font-weight: 760;
+      white-space: nowrap;
+    }
+
+    tbody tr:hover { background: #fbfcfd; }
+    tbody tr:last-child td { border-bottom: 0; }
+
+    .company {
+      font-weight: 760;
+      font-size: 15px;
+    }
+
+    .tag {
+      display: inline-flex;
+      align-items: center;
+      min-height: 26px;
+      padding: 3px 9px;
+      border-radius: 999px;
+      font-size: 12px;
+      font-weight: 700;
+      white-space: nowrap;
+    }
+
+    .tag.auto { color: var(--blue); background: var(--blue-soft); }
+    .tag.bio { color: var(--teal); background: var(--green-soft); }
+    .tag.med { color: var(--red); background: var(--red-soft); }
+    .tag.round { color: var(--amber); background: var(--amber-soft); }
+
+    .amount {
+      color: var(--red);
+      font-weight: 820;
+      white-space: nowrap;
+    }
+
+    .source {
+      color: var(--blue);
+      text-decoration: none;
+      font-weight: 720;
+      white-space: nowrap;
+    }
+
+    .source:hover { text-decoration: underline; }
+
+    .empty {
+      display: none;
+      padding: 28px;
+      color: var(--muted);
+      text-align: center;
+      border-top: 1px solid var(--line);
+    }
+
+    .archive {
+      margin-top: 16px;
+      display: grid;
+      gap: 10px;
+    }
+
+    details {
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      overflow: hidden;
+    }
+
+    summary {
+      cursor: pointer;
+      padding: 14px 16px;
+      font-weight: 760;
+      list-style-position: inside;
+    }
+
+    .archive-body {
+      padding: 0 16px 15px;
+      color: var(--muted);
+      font-size: 13px;
+      line-height: 1.7;
+    }
+
+    .notes {
+      display: grid;
+      grid-template-columns: 1.15fr 0.85fr;
+      gap: 14px;
+      margin-top: 16px;
+    }
+
+    .note {
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 15px 16px;
+      color: var(--muted);
+      font-size: 13px;
+      line-height: 1.7;
+    }
+
+    .note strong { color: var(--ink); }
+
+    @media (max-width: 880px) {
+      header, .notes { grid-template-columns: 1fr; }
+      .status { min-width: 0; }
+      .metrics { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .toolbar { grid-template-columns: 1fr; }
+    }
+
+    @media (max-width: 520px) {
+      .shell { padding: 22px 14px 34px; }
+      .metrics { grid-template-columns: 1fr; }
+      h1 { font-size: 31px; }
+    }
+  </style>
+</head>
+<body>
+  <main class="shell">
+    <header>
+      <section>
+        <h1>中国大额融资日报</h1>
+        <p class="subtitle">展示中国每日公开披露、融资额大于 1 亿元人民币的融资案例。网页每天滚动更新，默认显示最新日期，历史数据保留过去 12 个月并折叠归档。</p>
+      </section>
+      <aside class="status" aria-label="更新状态">
+        <span>最新更新</span>
+        <strong id="latestDateText">2026-05-13</strong>
+      </aside>
+    </header>
+
+    <section class="metrics" aria-label="最新概览">
+      <div class="metric">
+        <b id="caseCount">0</b>
+        <span>当前筛选案例</span>
+      </div>
+      <div class="metric">
+        <b id="totalAmount">-</b>
+        <span>披露金额合计，含美元近似折算</span>
+      </div>
+      <div class="metric">
+        <b id="industryCount">-</b>
+        <span>覆盖行业数量</span>
+      </div>
+      <div class="metric">
+        <b>1 亿+</b>
+        <span>入选门槛：单笔融资额大于人民币 1 亿元</span>
+      </div>
+    </section>
+
+    <section class="panel" aria-label="融资案例">
+      <nav class="tabs" id="dateTabs" aria-label="日期选项"></nav>
+
+      <section class="toolbar" aria-label="筛选工具">
+        <input id="searchBox" type="search" placeholder="搜索企业、机构、业务关键词" />
+        <select id="industryFilter" aria-label="按行业筛选"></select>
+        <select id="roundFilter" aria-label="按轮次筛选"></select>
+      </section>
+
+      <section class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th style="width: 13%;">企业名称</th>
+              <th style="width: 12%;">所在行业</th>
+              <th style="width: 25%;">业务介绍</th>
+              <th style="width: 12%;">融资额</th>
+              <th style="width: 10%;">融资轮次</th>
+              <th style="width: 21%;">投资机构名称</th>
+              <th style="width: 7%;">来源</th>
+            </tr>
+          </thead>
+          <tbody id="caseRows"></tbody>
+        </table>
+        <div id="emptyState" class="empty">没有符合当前筛选条件的融资案例。</div>
+      </section>
+    </section>
+
+    <section class="archive" id="archiveList" aria-label="历史归档"></section>
+
+    <section class="notes">
+      <div class="note">
+        <strong>口径说明：</strong>本页按“公开披露日期”收录，不等同于工商交割日。美元金额按约 1 美元 = 7.2 元人民币粗略折算，仅用于判断是否超过 1 亿元门槛。
+      </div>
+      <div class="note">
+        <strong>更新方式：</strong>每日检索新增案例并追加到最新日期；历史归档只保留过去 12 个月内的数据，在线收藏链接保持不变。
+      </div>
+    </section>
+  </main>
+
+  <script>
+    const reports = [
+  {
+    amountSummary: "超 17 亿元，另有数亿元级案例",
+    cases: [
+      {
+        company: "云天畅想",
+        industry: "边缘云与AI算力",
+        industryClass: "enterprise",
+        intro: "提供边缘云基础设施、云电竞与 AI 算力服务，布局算力网络与边缘节点能力。",
+        amount: "超 10 亿元",
+        amountNote: "",
+        round: "E 轮",
+        investors: "中国互联网投资基金领投，中金资本等机构联合投资。",
+        sourceName: "投资界",
+        sourceUrl: "https://news.pedaily.cn/202606/565278.shtml"
+      },
+      {
+        company: "逆矩阵",
+        industry: "世界模型",
+        industryClass: "enterprise",
+        intro: "构建通用世界基座模型，为工业、具身智能、物理仿真与科学预测提供底层认知引擎。",
+        amount: "超 1 亿美元",
+        amountNote: "按近似汇率折算超过 7 亿元人民币。",
+        round: "种子++轮",
+        investors: "经纬创投、光合创投、五源资本、BAI资本、钟鼎资本等参与，并获蚂蚁集团战略投资，老股东高瓴创投、燕缘创投持续加注。",
+        sourceName: "投资界",
+        sourceUrl: "https://news.pedaily.cn/202606/565318.shtml"
+      },
+      {
+        company: "纵维立方",
+        industry: "3D 打印",
+        industryClass: "deeptech",
+        intro: "Anycubic 母公司，提供消费级与专业级 3D 打印设备、材料及制造解决方案。",
+        amount: "数亿元",
+        amountNote: "",
+        round: "B 轮",
+        investors: "达晨、国泰海通联合领投，挑战者创投、未来资产资本（中国）、清波基金跟投。",
+        sourceName: "投资界",
+        sourceUrl: "https://news.pedaily.cn/202606/565277.shtml"
+      }
+    ],
+    date: "2026-06-17",
+    windowStart: "2025-06-17",
+    windowEnd: "2026-06-17"
+  },
+  {
+    amountSummary: "超 20 亿元，另有数亿元级案例",
+    cases: [
+      {
+        company: "硅基流动",
+        industry: "AI 基础设施",
+        industryClass: "enterprise",
+        intro: "提供大模型云服务、推理加速与弹性算力调度，定位生成式 AI 基础设施平台。",
+        amount: "超 20 亿元",
+        amountNote: "",
+        round: "B 轮",
+        investors: "携程战投、晶科能源控股、金蝶股份、联通新沃、盛奕资本、壁仞战投、蔚来资本、商汤战投、巨人网络、国泰君安创新投、纪源资本、华登国际、华控基金、国开金融、中关村科学城等联合投资。",
+        sourceName: "投资界",
+        sourceUrl: "https://news.pedaily.cn/202606/565261.shtml"
+      },
+      {
+        company: "深朴智能",
+        industry: "机器人控制系统",
+        industryClass: "auto",
+        intro: "研发具身智能机器人的控制系统与关键模组，服务工业和复杂运动场景。",
+        amount: "数亿元",
+        amountNote: "",
+        round: "Pre-A 轮",
+        investors: "红杉中国种子基金与高瓴创投联合领投，三一创投、商汤国香资本、联想创投等跟投。",
+        sourceName: "投资界",
+        sourceUrl: "https://news.pedaily.cn/202606/565268.shtml"
+      }
+    ],
+    date: "2026-06-16",
+    windowStart: "2025-06-17",
+    windowEnd: "2026-06-17"
+  },
+  {
+    amountSummary: "超 20 亿元",
+    cases: [
+      {
+        company: "世航智能",
+        industry: "具身智能机器人",
+        industryClass: "auto",
+        intro: "全球领先的海洋具身机器人公司，专注海洋通用机器人的研发、生产、销售与服务。",
+        amount: "超 10 亿元",
+        amountNote: "",
+        round: "A 轮",
+        investors: "上河动量基金、Vertex Growth、中国最大农业产业基金、誉尊资本、大洋电机参与，老股东金沙江创投、祥峰中国基金、华映资本、长石资本、盛景嘉成资本、鞍羽资本超额追投。",
+        sourceName: "投资界",
+        sourceUrl: "https://news.pedaily.cn/202606/565212.shtml"
+      },
+      {
+        company: "极佳视界",
+        industry: "机器人视觉",
+        industryClass: "auto",
+        intro: "面向机器人视觉感知与具身智能场景提供产品和算法能力。",
+        amount: "10 亿元",
+        amountNote: "",
+        round: "B2 轮",
+        investors: "狮城资本、中比基金、建投投资、万向钱潮、复星锐正、华盖创赢、金创投、德屹资本、华仓资本、元石基金等投资，国中资本、达晨财智、图灵资管等老股东超额加注。",
+        sourceName: "投资界",
+        sourceUrl: "https://news.pedaily.cn/202606/565201.shtml"
+      }
+    ],
+    date: "2026-06-15",
+    windowStart: "2025-06-17",
+    windowEnd: "2026-06-17"
+  },
+  {
+    amountSummary: "0",
+    cases: [],
+    date: "2026-06-14",
+    windowStart: "2025-06-17",
+    windowEnd: "2026-06-17"
+  },
+  {
+    amountSummary: "超 10 亿元",
+    cases: [
+      {
+        company: "微纳核芯",
+        industry: "AI 芯片",
+        industryClass: "enterprise",
+        intro: "聚焦三维存算一体 AI 芯片，推进端侧与云侧大模型推理协处理器产品化。",
+        amount: "超 10 亿元",
+        amountNote: "公开表述为已完成超 10 亿元 B 轮系列融资。",
+        round: "B 轮系列",
+        investors: "中国移动链长基金、超越摩尔、江城基金、佰维存储、九坤创投、中国互联网投资基金等参与，老股东中芯聚源、毅达资本、蓝驰创投、东方嘉富及立讯精密产投继续加持。",
+        sourceName: "投资界",
+        sourceUrl: "https://news.pedaily.cn/202606/565176.shtml"
+      }
+    ],
+    date: "2026-06-13",
+    windowStart: "2025-06-17",
+    windowEnd: "2026-06-17"
+  },
+  {
+    amountSummary: "0",
+    cases: [],
+    date: "2026-06-12",
+    windowStart: "2025-06-17",
+    windowEnd: "2026-06-17"
+  },
+  {
+    amountSummary: "0",
+    cases: [],
+    date: "2026-06-11",
+    windowStart: "2025-06-17",
+    windowEnd: "2026-06-17"
+  },
+  {
+    date: "2026-06-10",
+    windowStart: "2025-06-17",
+    windowEnd: "2026-06-17",
+    amountSummary: "0",
+    cases: []
+  },
+  {
+    date: "2026-06-09",
+    windowStart: "2025-06-17",
+    windowEnd: "2026-06-17",
+    amountSummary: "0",
+    cases: []
+  },
+  {
+    date: "2026-06-08",
+    windowStart: "2025-06-17",
+    windowEnd: "2026-06-17",
+    amountSummary: "0",
+    cases: []
+  },
+  {
+    amountSummary: "0",
+    cases: [],
+    date: "2026-06-07",
+    windowStart: "2025-06-17",
+    windowEnd: "2026-06-17"
+  },
+  {
+    amountSummary: "0",
+    cases: [],
+    date: "2026-06-06",
+    windowStart: "2025-06-17",
+    windowEnd: "2026-06-17"
+  },
+  {
+    amountSummary: "0",
+    cases: [],
+    date: "2026-06-05",
+    windowStart: "2025-06-17",
+    windowEnd: "2026-06-17"
+  },
+  {
+    amountSummary: "超 3 亿元",
+    cases: [
+      {
+        company: "立芯软件",
+        industry: "EDA 工具",
+        industryClass: "enterprise",
+        intro: "聚焦数字实现全流程工具链和 3DIC/Chiplet 系统级设计解决方案的 EDA 企业。",
+        amount: "超 3 亿元",
+        amountNote: "",
+        round: "C 轮",
+        investors: "同创伟业与浦东科创旗下海望资本联合深创投、中网投、福建电子领投；社保基金、福创投、创维资本等跟投。",
+        sourceName: "界面新闻",
+        sourceUrl: "https://finance.sina.com.cn/jjxw/2026-06-04/doc-iniaffcx2798104.shtml?froms=ggmp"
+      }
+    ],
+    date: "2026-06-04",
+    windowStart: "2025-06-17",
+    windowEnd: "2026-06-17"
+  },
+  {
+    amountSummary: "近 2 亿元",
+    cases: [
+      {
+        company: "威凯尔医药",
+        industry: "医药研发与原料药",
+        industryClass: "med",
+        intro: "覆盖医药中间体、原料药研发生产及创新药研发服务的高科技医药企业。",
+        amount: "近 2 亿元",
+        amountNote: "",
+        round: "C3 轮",
+        investors: "宏诚投资领投；星河创投、杭州金龙、弘曜科创、华点投资等老股东持续加持，并引入华富瑞兴等新投资机构。",
+        sourceName: "新浪科技",
+        sourceUrl: "https://finance.sina.com.cn/tech/roll/2026-06-03/doc-iniaavwu2522893.shtml"
+      }
+    ],
+    date: "2026-06-03",
+    windowStart: "2025-06-17",
+    windowEnd: "2026-06-17"
+  },
+  {
+    amountSummary: "0",
+    cases: [],
+    date: "2026-06-02",
+    windowStart: "2025-06-17",
+    windowEnd: "2026-06-17"
+  },
+  {
+    amountSummary: "数亿元",
+    cases: [
+      {
+        company: "微光医疗",
+        industry: "医疗器械/介入激光",
+        industryClass: "med",
+        intro: "激光介入器械企业，推进 AI 赋能介入器械诊疗平台建设。",
+        amount: "数亿元",
+        amountNote: "",
+        round: "新一轮融资",
+        investors: "中美绿色长三角基金、多锐资本联合领投；中银资本、汇誉投资跟投。",
+        sourceName: "搜狐网（转引）",
+        sourceUrl: "https://m.sohu.com/a/1030378966_118792"
+      },
+      {
+        company: "糖吉医疗",
+        industry: "医疗器械/减重代谢介入",
+        industryClass: "med",
+        intro: "介入式胃转流支架减重与代谢疾病治疗技术平台。",
+        amount: "超 1 亿元",
+        amountNote: "",
+        round: "C+ 轮",
+        investors: "未披露。",
+        sourceName: "投资界",
+        sourceUrl: "https://news.pedaily.cn/202606/564675.shtml"
+      },
+      {
+        company: "睿健医药",
+        industry: "生物医药/细胞治疗平台",
+        industryClass: "med",
+        intro: "通用型细胞治疗平台企业。",
+        amount: "2.1 亿元",
+        amountNote: "",
+        round: "C1 轮",
+        investors: "光合创投、杏泽资本联合领投。",
+        sourceName: "36氪",
+        sourceUrl: "https://eu.36kr.com/zh/newsflashes/3833937295304322"
+      }
+    ],
+    date: "2026-06-01",
+    windowStart: "2025-06-17",
+    windowEnd: "2026-06-17"
+  },
+  {
+    amountSummary: "亿元级",
+    cases: [
+      {
+        company: "杉岩数据",
+        industry: "AI 数据基础设施/数据平台",
+        industryClass: "enterprise",
+        intro: "AI 原生数据基础设施与行业数据智能解决方案企业。",
+        amount: "亿元级",
+        amountNote: "",
+        round: "D 轮",
+        investors: "福田资本运营集团旗下长盛产业基金领投；达晨财智跟投。",
+        sourceName: "投资界",
+        sourceUrl: "https://news.pedaily.cn/202605/564462.shtml"
+      }
+    ],
+    date: "2026-05-27",
+    windowStart: "2025-06-17",
+    windowEnd: "2026-06-17"
+  },
+  {
+    amountSummary: "约 14.4 亿元",
+    cases: [
+      {
+        company: "零一汽车",
+        industry: "新能源重卡/智能驾驶",
+        industryClass: "auto",
+        intro: "新能源重卡与智能驾驶科技企业。",
+        amount: "2 亿美元",
+        amountNote: "按约 1 美元 = 7.2 元人民币折算，约 14.4 亿元人民币。",
+        round: "B2 轮",
+        investors: "紫金矿业、厦钨资本、三花控股等产业资本；淡马锡、毅达资本等；高瓴资本、朝希资本、长石资本、活水资本、元禾璞华、耀途资本等参与。",
+        sourceName: "投中网",
+        sourceUrl: "https://m.chinaventure.com.cn/news/110-20260526-391534.html"
+      }
+    ],
+    date: "2026-05-26",
+    windowStart: "2025-06-17",
+    windowEnd: "2026-06-17"
+  },
+  {
+    amountSummary: "超 3 亿元",
+    cases: [
+      {
+        company: "黑格科技",
+        industry: "3D 打印",
+        industryClass: "deeptech",
+        intro: "以 3D 打印应用和数字化智能制造技术为核心，覆盖齿科、先进制造、消费电子等场景。",
+        amount: "超 3 亿元",
+        amountNote: "",
+        round: "C 轮",
+        investors: "君联资本、达晨联合领投；歌斐资产、国科投资跟投。",
+        sourceName: "黑格科技官网",
+        sourceUrl: "https://www.heygears.com/cn/news/476"
+      }
+    ],
+    date: "2026-05-25",
+    windowStart: "2025-06-17",
+    windowEnd: "2026-06-17"
+  },
+  {
+    date: "2026-05-22",
+    windowStart: "2025-06-17",
+    windowEnd: "2026-06-17",
+    amountSummary: "0",
+    cases: []
+  },
+  {
+    date: "2026-05-21",
+    windowStart: "2025-06-17",
+    windowEnd: "2026-06-17",
+    amountSummary: "0",
+    cases: []
+  },
+  {
+    amountSummary: "0",
+    cases: [],
+    date: "2026-05-20",
+    windowStart: "2025-06-17",
+    windowEnd: "2026-06-17"
+  },
+  {
+    amountSummary: "0",
+    cases: [],
+    date: "2026-05-19",
+    windowStart: "2025-06-17",
+    windowEnd: "2026-06-17"
+  },
+  {
+    amountSummary: "约 6 亿元",
+    cases: [
+      {
+        company: "矩量光启",
+        industry: "量子科技",
+        industryClass: "deeptech",
+        intro: "聚焦量子测控等关键设备与应用的量子科技企业。",
+        amount: "2 亿元",
+        amountNote: "",
+        round: "天使轮",
+        investors: "和利资本、钧山资本领投；中芯聚源、翰昱投资等产业方参与；翼荣资本跟投；老股东千乘资本、德同资本、半导体设备产业方追加。",
+        sourceName: "新华财经",
+        sourceUrl: "https://www.news.cn/liangzi/20260518/fb5fcfdcd04944edbdb1790836a1b667/c.html"
+      },
+      {
+        company: "晶核生物",
+        industry: "靶向核药",
+        industryClass: "med",
+        intro: "专注可视化诊疗一体化靶向放射性核素疗法开发的创新药企业。",
+        amount: "近 4 亿元",
+        amountNote: "",
+        round: "B 轮",
+        investors: "浦东创投、张江科投和 IDG 资本共同领投；高榕创投持续加码；国海创新资本、松青资本、瑞华资本、锡创投跟投。",
+        sourceName: "动脉新医药",
+        sourceUrl: "https://finance.sina.com.cn/roll/2026-05-18/doc-inhyimem8055901.shtml"
+      }
+    ],
+    date: "2026-05-18",
+    windowStart: "2025-06-17",
+    windowEnd: "2026-06-17"
+  },
+  {
+    date: "2026-05-13",
+    windowStart: "2025-06-17",
+    windowEnd: "2026-06-17",
+    amountSummary: "约 9.7 亿元",
+    cases: [
+      {
+        company: "芯驰科技",
+        industry: "车规芯片",
+        industryClass: "auto",
+        intro: "聚焦高可靠、高性能车规芯片，并从汽车智能化延伸至具身智能相关芯片能力。",
+        amount: "近 1 亿美元",
+        amountNote: "按约 1 美元 = 7.2 元人民币折算，约 7.2 亿元人民币。",
+        round: "C 轮",
+        investors: "苏产投领投；陕汽鸿德投资、亦庄国投、北京市先进制造基金、西安财金、益中亘泰等跟投。",
+        sourceName: "36氪",
+        sourceUrl: "https://eu.36kr.com/zh/newsflashes/3807090766241284"
+      },
+      {
+        company: "伊米诺康",
+        industry: "创新药平台",
+        industryClass: "med",
+        intro: "以基因编辑技术打造下一代抗体发现平台，推进全人源抗体兔与 AI 抗体药物筛选能力建设。",
+        amount: "2.5 亿元",
+        amountNote: "",
+        round: "A 轮",
+        investors: "维梧资本领投；高脉元航跟投；熙诚金睿、泰煜投资追加投资；光源资本担任独家财务顾问。",
+        sourceName: "36氪",
+        sourceUrl: "https://eu.36kr.com/zh/p/3807053435756803"
+      }
+    ]
+  },
+  {
+    date: "2026-05-11",
+    windowStart: "2025-06-17",
+    windowEnd: "2026-06-17",
+    amountSummary: "近 5 亿元",
+    cases: [
+      {
+        company: "维他动力",
+        industry: "消费级具身智能",
+        industryClass: "auto",
+        intro: "研发消费级具身智能产品，代表产品包括 Vbot 超能机器狗及空间智能硬件。",
+        amount: "近 5 亿元",
+        amountNote: "",
+        round: "Pre-A 轮",
+        investors: "东方嘉富、华泰紫金、复星锐正联合领投；尚颀资本、明荟致远跟投；凯辉基金、今日资本、高瓴创投等继续加码。",
+        sourceName: "DoNews",
+        sourceUrl: "https://www.donews.com/news/detail/4/6550073.html"
+      }
+    ]
+  },
+  {
+    date: "2026-05-08",
+    windowStart: "2025-06-17",
+    windowEnd: "2026-06-17",
+    amountSummary: "数亿+",
+    cases: [
+      {
+        company: "费勉科技",
+        industry: "高端科学仪器",
+        industryClass: "auto",
+        intro: "核心团队来自复旦，围绕高端科学仪器、工业母机相关方向推进研发、产能和市场拓展。",
+        amount: "数亿元",
+        amountNote: "",
+        round: "C轮",
+        investors: "复容投资、复旦科创、工业母机基金、元禾璞华、深创投等十余家机构参与。",
+        sourceName: "投资界",
+        sourceUrl: "https://news.pedaily.cn/202605/563593.shtml"
+      }
+    ]
+  },
+  {
+    date: "2026-05-07",
+    windowStart: "2025-06-17",
+    windowEnd: "2026-06-17",
+    amountSummary: "超 7 亿元",
+    cases: [
+      {
+        company: "无问芯穹",
+        industry: "AI 基础设施",
+        industryClass: "enterprise",
+        intro: "提供异构算力调度与 MaaS 平台服务，面向 Token 经济时代构建 AGI 基础设施。",
+        amount: "超 7 亿元",
+        amountNote: "",
+        round: "新一轮融资",
+        investors: "杭州高新金投集团、惠远资本联合领投；国兴资本、秦淮数据、广发乾和等跟投；君联资本、上海国投孚腾和元智未来追加投资。",
+        sourceName: "证券时报",
+        sourceUrl: "https://www.stcn.com/article/detail/3897369.html"
+      }
+    ]
+  },
+  {
+    date: "2026-05-06",
+    windowStart: "2025-06-17",
+    windowEnd: "2026-06-17",
+    amountSummary: "约 6 亿+",
+    cases: [
+      {
+        company: "魔形智能",
+        industry: "AI算力与Token服务",
+        industryClass: "auto",
+        intro: "定位 Token 供应商，打造 Token 超级工厂与创新超节点算力集群。",
+        amount: "数亿元",
+        amountNote: "",
+        round: "Pre-A轮",
+        investors: "达泰资本领投；上海半导体产投、永兴材料、邦盛资本、亿合资本等联合投资；香港科技园创投基金继续加码。",
+        sourceName: "投中网",
+        sourceUrl: "https://finance.sina.com.cn/tech/roll/2026-05-06/doc-inhwxxki3422505.shtml"
+      },
+      {
+        company: "暖芯迦",
+        industry: "脑机接口",
+        industryClass: "med",
+        intro: "聚焦视觉脑机接口产品，推进临床试验与核心技术迭代。",
+        amount: "3 亿元",
+        amountNote: "",
+        round: "战略融资",
+        investors: "知名产业投资机构与君联资本联合领投；丰年资本超额追投；广发信德、财通资本跟投；启峰资本担任财务顾问。",
+        sourceName: "融中财经",
+        sourceUrl: "https://www.thecapital.com.cn/newsDetail/122574"
+      }
+    ]
+  },
+  {
+    date: "2026-04-23",
+    windowStart: "2025-06-17",
+    windowEnd: "2026-06-17",
+    amountSummary: "近 10 亿元",
+    cases: [
+      {
+        company: "普渡机器人",
+        industry: "商用服务机器人",
+        industryClass: "auto",
+        intro: "面向餐饮、酒店、零售等场景提供商用服务机器人，并持续投入具身智能、产品矩阵和全球市场拓展。",
+        amount: "近 10 亿元",
+        amountNote: "",
+        round: "新一轮",
+        investors: "龙岗金控、亚投资本联合领投；北汽产投、蓝思科技、弘晖基金及多地政府引导基金等参与。",
+        sourceName: "36氪",
+        sourceUrl: "https://www.36kr.com/p/3777719893283840"
+      }
+    ]
+  },
+  {
+    amountSummary: "15 亿元",
+    cases: [
+      {
+        company: "奕行智能",
+        industry: "AI 计算芯片",
+        industryClass: "enterprise",
+        intro: "专注新一代通用 AI 计算芯片设计及解决方案，围绕 RISC-V 与自研 AI 计算架构推进量产落地。",
+        amount: "15 亿元",
+        amountNote: "",
+        round: "B 轮",
+        investors: "北京经开区产业升级基金、北京高精尖产业发展投资基金、北京信息产业发展投资基金、北京人工智能产业投资基金联合领投；和利资本、伯藜创投、赛意产业基金、龙江基金、青檀资本、九坤创投等跟投。",
+        sourceName: "投资界",
+        sourceUrl: "https://news.pedaily.cn/202604/563038.shtml"
+      }
+    ],
+    date: "2026-04-22",
+    windowStart: "2025-06-17",
+    windowEnd: "2026-06-17"
+  },
+  {
+    date: "2026-04-14",
+    windowStart: "2025-06-17",
+    windowEnd: "2026-06-17",
+    amountSummary: "超 1 亿元",
+    cases: [
+      {
+        company: "蓝点触控",
+        industry: "机器人传感器",
+        industryClass: "auto",
+        intro: "研发人形机器人六维力传感器、关节力传感器、通用力传感器及复合型机器人工作站方案。",
+        amount: "超 1 亿元",
+        amountNote: "",
+        round: "C+轮",
+        investors: "宁德时代旗下溥泉资本、智元机器人、银河通用、奥普特、银河源汇等联合投资。",
+        sourceName: "36氪",
+        sourceUrl: "https://m.36kr.com/p/3766434507440903"
+      }
+    ]
+  },
+  {
+    date: "2026-03-05",
+    windowStart: "2025-06-17",
+    windowEnd: "2026-06-17",
+    amountSummary: "约 30 亿+",
+    cases: [
+      {
+        company: "星动纪元",
+        industry: "人形机器人",
+        industryClass: "auto",
+        intro: "聚焦人形机器人本体、运动控制和规模化交付。",
+        amount: "10 亿元",
+        amountNote: "",
+        round: "B轮",
+        investors: "公开报道披露为多家产业资本和财务投资机构参与。",
+        sourceName: "东方财富研报",
+        sourceUrl: "https://pdf.dfcfw.com/pdf/H3_AP202603241820718442_1.pdf"
+      },
+      {
+        company: "帕西尼",
+        industry: "机器人触觉传感",
+        industryClass: "auto",
+        intro: "围绕人形机器人触觉传感器、电子皮肤和多模态感知方案进行研发与量产。",
+        amount: "超 10 亿元",
+        amountNote: "",
+        round: "战略轮",
+        investors: "公开研报统计为 2026 年人形机器人产业 10 亿级融资之一。",
+        sourceName: "东方财富研报",
+        sourceUrl: "https://pdf.dfcfw.com/pdf/H3_AP202603241820718442_1.pdf"
+      },
+      {
+        company: "极佳视界",
+        industry: "机器人视觉",
+        industryClass: "auto",
+        intro: "面向机器人视觉感知与具身智能场景提供产品和算法能力。",
+        amount: "近 10 亿元",
+        amountNote: "",
+        round: "Pre-B轮",
+        investors: "公开研报统计为 2026 年人形机器人产业 10 亿级融资之一。",
+        sourceName: "东方财富研报",
+        sourceUrl: "https://pdf.dfcfw.com/pdf/H3_AP202603241820718442_1.pdf"
+      }
+    ]
+  },
+  {
+    date: "2026-03-02",
+    windowStart: "2025-06-17",
+    windowEnd: "2026-06-17",
+    amountSummary: "约 38 亿元",
+    cases: [
+      {
+        company: "银河通用",
+        industry: "具身智能机器人",
+        industryClass: "auto",
+        intro: "研发通用具身智能机器人及相关大模型、软硬件系统，面向商业和服务场景落地。",
+        amount: "25 亿元",
+        amountNote: "",
+        round: "新一轮",
+        investors: "国家人工智能产业基金、中国石化、中信集团投资控股、中国银行、上汽集团金控、中芯聚源、亦庄国投等参与。",
+        sourceName: "每经网",
+        sourceUrl: "https://www.nbd.com.cn/articles/2026-03-02/4275979.html"
+      },
+      {
+        company: "松延动力",
+        industry: "人形机器人",
+        industryClass: "auto",
+        intro: "研发人形机器人整机及运动能力，曾参与央视春晚机器人展示。",
+        amount: "近 10 亿元",
+        amountNote: "",
+        round: "B轮",
+        investors: "晨道资本领投；国科投资、京国盛基金、九合创投等跟投。",
+        sourceName: "新浪财经",
+        sourceUrl: "https://finance.sina.com.cn/chanjing/cyxw/2026-03-03/doc-inhpsavw7710825.shtml"
+      },
+      {
+        company: "优理奇机器人",
+        industry: "通用具身智能",
+        industryClass: "auto",
+        intro: "研发通用具身智能机器人，面向复杂场景操作与商业化应用。",
+        amount: "近 3 亿元",
+        amountNote: "",
+        round: "新一轮股权融资",
+        investors: "中金汇融、洪山资本、广州产投、谢诺投资参与；吴中金控、涌铧投资等老股东继续追投。",
+        sourceName: "36氪",
+        sourceUrl: "https://www.36kr.com/p/3707043535778177"
+      }
+    ]
+  },
+  {
+    date: "2026-02-24",
+    windowStart: "2025-06-17",
+    windowEnd: "2026-06-17",
+    amountSummary: "0",
+    cases: []
+  },
+  {
+    date: "2026-02-14",
+    windowStart: "2025-06-17",
+    windowEnd: "2026-06-17",
+    amountSummary: "数亿元",
+    cases: [
+      {
+        company: "千诀科技",
+        industry: "具身大脑",
+        industryClass: "auto",
+        intro: "构建世界模型与自主决策中枢，服务家庭、服务机器人及全尺寸机器人场景。",
+        amount: "数亿元",
+        amountNote: "",
+        round: "Pre-A++扩展轮",
+        investors: "祥峰资本、智路资本、英诺天使、钧山资本、集美创投、南创投、京铭资本等参与。",
+        sourceName: "36氪",
+        sourceUrl: "https://36kr.com/p/3680070412152706"
+      }
+    ]
+  },
+  {
+    date: "2026-02-11",
+    windowStart: "2025-06-17",
+    windowEnd: "2026-06-17",
+    amountSummary: "数亿元",
+    cases: [
+      {
+        company: "临界点",
+        industry: "机器人灵巧手",
+        industryClass: "auto",
+        intro: "研发机器人灵巧手硬件、算法和操作数据集，服务下游具身智能机器人客户。",
+        amount: "数亿元",
+        amountNote: "",
+        round: "新一轮",
+        investors: "头部互联网大厂领投；BV百度风投、云锋基金、Synstellation Capital、均胜电子、龙旗科技、上汽金控等参与；蓝驰创投、高瓴资本继续认购。",
+        sourceName: "36氪",
+        sourceUrl: "https://36kr.com/p/3678179258425990"
+      }
+    ]
+  },
+  {
+    date: "2026-01-12",
+    windowStart: "2025-06-17",
+    windowEnd: "2026-06-17",
+    amountSummary: "10 亿元",
+    cases: [
+      {
+        company: "自变量机器人",
+        industry: "具身智能基础模型",
+        industryClass: "auto",
+        intro: "研发通用具身智能基础模型与机器人系统，推动端到端具身模型能力落地。",
+        amount: "10 亿元",
+        amountNote: "",
+        round: "A++轮",
+        investors: "字节跳动、红杉中国领投；北京信息产业发展基金、深创投、南山战新投、锡创投等联合投资。",
+        sourceName: "每日经济新闻",
+        sourceUrl: "https://www.nbd.com.cn/articles/2026-01-12/4216995.html"
+      }
+    ]
+  },
+  {
+    date: "2025-12-25",
+    windowStart: "2025-06-17",
+    windowEnd: "2026-06-17",
+    amountSummary: "61.22 亿元",
+    cases: [
+      {
+        company: "深蓝汽车",
+        industry: "新能源汽车",
+        industryClass: "auto",
+        intro: "长安旗下新能源智能汽车品牌，推进车型研发、L3 自动驾驶和产品矩阵建设。",
+        amount: "61.22 亿元",
+        amountNote: "",
+        round: "C轮",
+        investors: "长安汽车、重庆渝富控股集团有限公司、招银金融资产投资有限公司共同出资。",
+        sourceName: "IT之家",
+        sourceUrl: "https://www.ithome.com/0/907/962.htm"
+      }
+    ]
+  },
+  {
+    date: "2025-12-08",
+    windowStart: "2025-06-17",
+    windowEnd: "2026-06-17",
+    amountSummary: "0",
+    cases: []
+  },
+  {
+    date: "2025-11-10",
+    windowStart: "2025-06-17",
+    windowEnd: "2026-06-17",
+    amountSummary: "3 亿元",
+    cases: [
+      {
+        company: "无界动力",
+        industry: "通用具身智能机器人",
+        industryClass: "auto",
+        intro: "通用具身智能机器人公司，团队聚焦机器人本体、感知和智能控制。",
+        amount: "3 亿元",
+        amountNote: "两轮天使融资规模合计达 5 亿元",
+        round: "天使轮",
+        investors: "红杉中国、线性资本领投；高瓴创投、地平线、华业天成、钟鼎资本、BV百度风投、同歌创投等跟投。",
+        sourceName: "36氪",
+        sourceUrl: "https://www.36kr.com/p/3547970791420033"
+      }
+    ]
+  },
+  {
+    date: "2025-10-15",
+    windowStart: "2025-06-17",
+    windowEnd: "2026-06-17",
+    amountSummary: "数亿元",
+    cases: [
+      {
+        company: "玻色量子",
+        industry: "量子计算",
+        industryClass: "auto",
+        intro: "研发量子计算软硬件及产业应用平台，服务复杂优化、科学计算等场景。",
+        amount: "数亿元",
+        amountNote: "",
+        round: "A++轮",
+        investors: "华德科创、南山战新投联合领投；广发信德、湖南财信产业基金、纬德信息等跟投；啟赋资本继续加码。",
+        sourceName: "36氪",
+        sourceUrl: "https://www.36kr.com/p/3508786553740421"
+      }
+    ]
+  },
+  {
+    date: "2025-09-10",
+    windowStart: "2025-06-17",
+    windowEnd: "2026-06-17",
+    amountSummary: "数亿元",
+    cases: [
+      {
+        company: "主线科技",
+        industry: "无人驾驶卡车",
+        industryClass: "auto",
+        intro: "聚焦港口、物流枢纽、公路货运与城配物流等场景的无人驾驶卡车商业化。",
+        amount: "数亿元",
+        amountNote: "",
+        round: "战略融资",
+        investors: "北京顺义高精尖产业基金、国投创益、榆煤基金、徐州产发、兴银理财、合肥肥东产投联合投资。",
+        sourceName: "新浪财经",
+        sourceUrl: "https://finance.sina.cn/stock/jdts/2025-09-10/detail-infpytxk4266166.d.html"
+      }
+    ]
+  },
+  {
+    date: "2025-07-31",
+    windowStart: "2025-06-17",
+    windowEnd: "2026-06-17",
+    amountSummary: "0",
+    cases: []
+  },
+  {
+    date: "2025-06-23",
+    windowStart: "2025-06-17",
+    windowEnd: "2026-06-17",
+    amountSummary: "11 亿元",
+    cases: [
+      {
+        company: "银河通用",
+        industry: "具身智能机器人",
+        industryClass: "auto",
+        intro: "研发具身智能机器人和机器人通用智能平台，推进工业制造等场景商业化落地。",
+        amount: "11 亿元",
+        amountNote: "两年累计融资超 24 亿元",
+        round: "新一轮",
+        investors: "宁德时代战投及溥泉资本领投；国家开发银行国开科创、北京机器人产业基金、纪源资本等跟投。",
+        sourceName: "每日经济新闻",
+        sourceUrl: "https://www.nbd.com.cn/articles/2025-06-23/3917796.html"
+      }
+    ]
+  },
+  {
+    date: "2025-06-17",
+    windowStart: "2025-06-17",
+    windowEnd: "2026-06-17",
+    amountSummary: "0",
+    cases: []
+  }
+];
+    const dateTabs = document.querySelector("#dateTabs");
+    const caseRows = document.querySelector("#caseRows");
+    const archiveList = document.querySelector("#archiveList");
+    const searchBox = document.querySelector("#searchBox");
+    const industryFilter = document.querySelector("#industryFilter");
+    const roundFilter = document.querySelector("#roundFilter");
+    const emptyState = document.querySelector("#emptyState");
+    const caseCount = document.querySelector("#caseCount");
+    const totalAmount = document.querySelector("#totalAmount");
+    const industryCount = document.querySelector("#industryCount");
+    const latestDateText = document.querySelector("#latestDateText");
+    let activeDate = reports[0].date;
+
+    function normalize(value) {
+      return String(value || "").trim().toLowerCase();
+    }
+
+    function getActiveReport() {
+      return reports.find((report) => report.date === activeDate) || reports[0];
+    }
+
+    function escapeHtml(value) {
+      return String(value).replace(/[&<>"']/g, (char) => ({
+        "&": "&amp;",
+        "<": "&lt;",
+        ">": "&gt;",
+        '"': "&quot;",
+        "'": "&#039;"
+      })[char]);
+    }
+
+    function uniqueValues(items, key) {
+      return [...new Set(items.map((item) => item[key]).filter(Boolean))];
+    }
+
+    function renderTabs() {
+      dateTabs.innerHTML = reports.map((report, index) => {
+        const label = index === 0 ? `${report.date} 最新` : report.date;
+        return `<button class="tab" type="button" data-date="${report.date}" aria-selected="${report.date === activeDate}">${label}</button>`;
+      }).join("");
+
+      dateTabs.querySelectorAll(".tab").forEach((button) => {
+        button.addEventListener("click", () => {
+          activeDate = button.dataset.date;
+          searchBox.value = "";
+          render();
+        });
+      });
+    }
+
+    function renderFilters(report) {
+      const industries = uniqueValues(report.cases, "industry");
+      const rounds = uniqueValues(report.cases, "round");
+      const currentIndustry = industryFilter.value;
+      const currentRound = roundFilter.value;
+
+      industryFilter.innerHTML = `<option value="">全部行业</option>` + industries.map((industry) => (
+        `<option value="${escapeHtml(industry)}">${escapeHtml(industry)}</option>`
+      )).join("");
+      roundFilter.innerHTML = `<option value="">全部轮次</option>` + rounds.map((round) => (
+        `<option value="${escapeHtml(round)}">${escapeHtml(round)}</option>`
+      )).join("");
+
+      industryFilter.value = industries.includes(currentIndustry) ? currentIndustry : "";
+      roundFilter.value = rounds.includes(currentRound) ? currentRound : "";
+    }
+
+    function renderRows(report) {
+      const query = normalize(searchBox.value);
+      const industry = industryFilter.value;
+      const round = roundFilter.value;
+      const filtered = report.cases.filter((item) => {
+        const text = normalize(`${item.company} ${item.industry} ${item.intro} ${item.amount} ${item.round} ${item.investors}`);
+        return (!query || text.includes(query)) &&
+          (!industry || item.industry === industry) &&
+          (!round || item.round === round);
+      });
+
+      caseRows.innerHTML = filtered.map((item) => `
+        <tr>
+          <td><div class="company">${escapeHtml(item.company)}</div></td>
+          <td><span class="tag ${escapeHtml(item.industryClass)}">${escapeHtml(item.industry)}</span></td>
+          <td>${escapeHtml(item.intro)}</td>
+          <td><span class="amount">${escapeHtml(item.amount)}</span>${item.amountNote ? `<br />${escapeHtml(item.amountNote)}` : ""}</td>
+          <td><span class="tag round">${escapeHtml(item.round)}</span></td>
+          <td>${escapeHtml(item.investors)}</td>
+          <td><a class="source" href="${escapeHtml(item.sourceUrl)}" target="_blank" rel="noreferrer">${escapeHtml(item.sourceName)}</a></td>
+        </tr>
+      `).join("");
+
+      emptyState.style.display = filtered.length ? "none" : "block";
+      caseCount.textContent = String(filtered.length);
+    }
+
+    function renderArchive() {
+      archiveList.innerHTML = reports.map((report, index) => `
+        <details ${index === 0 ? "open" : ""}>
+          <summary>${escapeHtml(report.date)}：${report.cases.length} 个案例，合计 ${escapeHtml(report.amountSummary)}${report.windowStart ? ` · 窗口 ${escapeHtml(report.windowStart)} 至 ${escapeHtml(report.windowEnd)}` : ""}</summary>
+          <div class="archive-body">
+            ${report.cases.map((item) => `${escapeHtml(item.company)} · ${escapeHtml(item.industry)} · ${escapeHtml(item.amount)} · ${escapeHtml(item.round)}`).join("<br />")}
+          </div>
+        </details>
+      `).join("");
+    }
+
+    function render() {
+      const report = getActiveReport();
+      latestDateText.textContent = `${reports[0].date}（当前查看：${report.date}）`;
+      totalAmount.textContent = report.amountSummary;
+      industryCount.textContent = String(uniqueValues(report.cases, "industry").length);
+      renderTabs();
+      renderFilters(report);
+      renderRows(report);
+      renderArchive();
+    }
+
+    [searchBox, industryFilter, roundFilter].forEach((control) => {
+      control.addEventListener("input", () => renderRows(getActiveReport()));
+      control.addEventListener("change", () => renderRows(getActiveReport()));
+    });
+
+    render();
+  </script>
+</body>
+</html>
